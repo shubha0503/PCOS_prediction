@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f7f4">
+  <title>PCOS Risk Assessment</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="PCOS Risk Assessment home"><span class="brand-mark">P</span><span>PCOS <b>Risk Assessment</b></span></a>
+    <span class="top-note"><span class="status-dot"></span> Educational tool</span>
+  </header>
+
+  <main id="top" class="page-shell">
+    <section class="intro">
+      <div class="eyebrow">CLINICAL INPUT · ML ESTIMATE</div>
+      <h1>PCOS risk<br><em>assessment</em></h1>
+      <p class="intro-copy">Enter the available clinical details to receive a model-generated estimate. Fields are prefilled with example values; replace them with appropriate data.</p>
+      <div class="api-config">
+        <label for="api-url">Prediction API</label>
+        <input id="api-url" type="url" value="http://127.0.0.1:8000" spellcheck="false">
+      </div>
+      <p class="report-link"><a href="training-report.html">View model training results →</a></p>
+      <aside class="notice"><span aria-hidden="true">ⓘ</span><p><strong>For education only.</strong> This estimate is not a diagnosis or medical advice. Discuss symptoms and test results with a qualified healthcare professional.</p></aside>
+    </section>
+
+    <section class="form-panel" aria-labelledby="form-title">
+      <div class="form-heading"><div><div class="eyebrow">PATIENT INFORMATION</div><h2 id="form-title">Clinical details</h2></div><span class="field-count">41 model features</span></div>
+      <form id="prediction-form">
+        <div id="form-sections"></div>
+        <div class="form-actions">
+          <button class="button-secondary" type="reset">Reset examples</button>
+          <button class="button-primary" id="submit-button" type="submit"><span>Calculate estimate</span><span aria-hidden="true">→</span></button>
+        </div>
+      </form>
+      <div id="result" class="result" aria-live="polite" hidden></div>
+    </section>
+  </main>
+
+  <footer>PCOS Risk Assessment <span>·</span> Model output is informational and should not guide treatment decisions.</footer>
+</body>
+</html>

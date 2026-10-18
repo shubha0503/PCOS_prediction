@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f7f4">
+  <title>Model training report · PCOS Risk Assessment</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="training-report.js" defer></script>
+  <style>
+    .report-shell { width: min(1100px, calc(100% - 40px)); margin: 54px auto 80px; }
+    .report-shell h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1; margin: 12px 0 18px; }
+    .report-shell h1 em { color: #606b57; font-family: Georgia, serif; font-weight: 400; }
+    .report-intro { max-width: 760px; color: #62645d; line-height: 1.65; }
+    .report-nav { display: inline-block; margin: 10px 0 30px; color: #424b3d; }
+    .report-card { background: #fff; border: 1px solid #e7e5dc; border-radius: 18px; padding: 24px; margin: 18px 0; }
+    .report-card h2 { margin: 0 0 14px; font-size: 1.35rem; }
+    .report-meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 20px; }
+    .meta-item { background: #f5f4ef; border-radius: 12px; padding: 14px; }
+    .meta-item span, .meta-item strong { display: block; }
+    .meta-item span { color: #6b6b63; font-size: .83rem; margin-bottom: 6px; }
+    .meta-item strong { font-size: 1.05rem; }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; min-width: 670px; }
+    th, td { padding: 12px 10px; text-align: right; border-bottom: 1px solid #eceae3; white-space: nowrap; }
+    th:first-child, td:first-child { text-align: left; }
+    th { color: #68695f; font-size: .8rem; text-transform: uppercase; letter-spacing: .04em; }
+    td:first-child { font-weight: 650; }
+    .report-note { color: #696a62; font-size: .92rem; line-height: 1.55; }
+    .report-details { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 26px; }
+    .report-details h3 { font-size: 1rem; margin: 0 0 10px; }
+    .report-details ul { padding-left: 20px; margin: 0; color: #55574f; line-height: 1.65; }
+    .parameter-list { display: grid; grid-template-columns: 1fr auto; gap: 7px 14px; font-size: .9rem; }
+    .parameter-list dt { color: #67685f; }
+    .parameter-list dd { margin: 0; text-align: right; font-weight: 600; }
+    .error-box { padding: 18px; background: #fff0e9; color: #6b3525; border-radius: 12px; line-height: 1.5; }
+    .report-shell footer { margin: 40px 0 0; text-align: center; color: #727168; font-size: .85rem; }
+    @media (max-width: 600px) { .report-shell { margin-top: 32px; } .report-card { padding: 18px; } }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-mark">P</span><span>PCOS <b>Risk Assessment</b></span></a>
+    <span class="top-note"><span class="status-dot"></span> Training report</span>
+  </header>
+  <main class="report-shell">
+    <div class="eyebrow">MODEL EVALUATION</div>
+    <h1>Training <em>report</em></h1>
+    <p class="report-intro">Compare the classifiers evaluated on the held-out test split and review the dataset, preprocessing, and tuning settings. These results describe this dataset only; they are not clinical validation.</p>
+    <a class="report-nav" href="index.html">← Back to assessment</a>
+    <div id="report-content" aria-live="polite"><p class="report-note">Loading evaluation report…</p></div>
+    <footer>For research and educational use only. Do not use these estimates to make medical decisions.</footer>
+  </main>
+</body>
+</html>

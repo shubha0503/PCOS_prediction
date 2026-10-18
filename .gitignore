@@ -1,0 +1,15 @@
+# Python
+.venv/
+.venv*/
+venv/
+__pycache__/
+*.py[cod]
+
+# Frontend
+frontend/node_modules/
+frontend/.next/
+
+# Local environment and generated reports
+.env
+.env.*
+!.env.example
